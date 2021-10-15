@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../swiper/swiper.css" />
+  <script src="../swiper/swiper.js"></script>
+</head>
+
+<body>
+   <!-- 例子1 -->
+  <div class="swiper-container swp1">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+    </div>
+    <!-- 分页器 -->
+    <div class="swiper-pagination"></div>
+    <!-- 导航按钮 -->
+    <div class="swiper-button-prev swp-btn-prev1">上</div>
+    <div class="swiper-button-next swp-btn-next1">下</div>
+  </div>
+
+  <!-- 例子2 -->
+  <div class="swiper-container swp2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+    </div>
+    <!-- 分页器 -->
+    <div class="swiper-pagination"></div>
+    <!-- 导航按钮 -->
+    <div class="swiper-button-prev swp-btn-prev2">上</div>
+    <div class="swiper-button-next swp-btn-next2">下</div>
+  </div>
+</body>
+<script>
+  // - 例子1-----------------
+  var c = new Swiper(".swp1", {
+    nextSwipterItemtFn, //必须
+    // 是否自动轮播
+    autoplay: true,
+    // 分页器
+    pagination: {
+      el: ".swiper-pagination",
+      // 点击分页器是否进行切换
+      clickable: true,
+    },
+    // 前进后退按钮
+    navigation: {
+      nextEl: ".swp-btn-next1",
+      prevEl: ".swp-btn-prev1",
+    },
+  });
+  // - 例子2-----------------
+  var b = new Swiper(".swp2", {
+    nextSwipterItemtFn, //必须
+    // 是否自动轮播
+    autoplay: false,
+    // 分页器
+    pagination: {
+      el: ".swiper-pagination",
+      // 点击分页器是否进行切换
+      clickable: false,
+    },
+    // 前进后退按钮
+    navigation: {
+      nextEl: ".swp-btn-next2",
+      prevEl: ".swp-btn-prev2",
+    },
+  });
+</script>
+
+</html>
